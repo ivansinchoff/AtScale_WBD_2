@@ -1,8 +1,0 @@
-unique_name: Halfhour_Count
-object_type: metric
-label: Halfhour_Count
-description: Minutes
-calculation_method: count distinct
-column: TMINS
-dataset: V_VIEWING_30
-unrelated_dimensions_handling: repeat
