@@ -1,0 +1,19 @@
+unique_name: Area
+object_type: dimension
+label: Area
+hierarchies:
+  - unique_name: Area Hierarchy
+    label: Area Hierarchy
+    levels:
+      - unique_name: Area
+level_attributes:
+  - unique_name: Area
+    label: Area
+    contains_unique_names: false
+    dataset: V_AREA
+    is_unique_key: false
+    key_columns:
+      - AREA_ID
+    name_column: AREA_DESC
+
+type: standard

@@ -1,0 +1,18 @@
+unique_name: Media Type
+object_type: dimension
+label: Media Type
+hierarchies:
+  - unique_name: Media Type Hierarchy
+    label: Media Type Hierarchy
+    levels:
+      - unique_name: Media Type
+level_attributes:
+  - unique_name: Media Type
+    label: Media Type
+    contains_unique_names: false
+    dataset: V_MEDIA_TYPE
+    is_unique_key: false
+    key_columns:
+      - MEDIA_TYPE_ID
+    name_column: MEDIA_TYPE_DESC
+type: standard

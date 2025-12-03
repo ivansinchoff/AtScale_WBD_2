@@ -1,0 +1,19 @@
+unique_name: Sample Type
+object_type: dimension
+label: Sample Type
+hierarchies:
+  - unique_name: Sample Type Hierarchy
+    label: Sample Type Hierarchy
+    levels:
+      - unique_name: Sample Type
+level_attributes:
+  - unique_name: Sample Type
+    label: Sample Type
+    contains_unique_names: false
+    dataset: V_SAMPLE_TYPE
+    is_unique_key: false
+    key_columns:
+      - SAMPLE_TYPE_ID
+    name_column: SAMPLE_TYPE_DESC
+
+type: standard
