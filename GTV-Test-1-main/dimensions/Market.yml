@@ -1,0 +1,19 @@
+unique_name: Market
+object_type: dimension
+label: Market
+hierarchies:
+  - unique_name: Market Hierarchy
+    label: Market Hierarchy
+    levels:
+      - unique_name: Market
+level_attributes:
+  - unique_name: Market
+    label: Market
+    contains_unique_names: false
+    dataset: V_MARKETS
+    is_unique_key: false
+    key_columns:
+      - MARKET_ID
+    name_column: MARKET_DESC
+relationships: []
+type: standard

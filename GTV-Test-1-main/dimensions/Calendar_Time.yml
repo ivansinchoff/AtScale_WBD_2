@@ -1,0 +1,38 @@
+unique_name: Calendar_Time
+object_type: dimension
+label: Calendar_Time
+hierarchies:
+  - unique_name: Time Hierarchy
+    label: Time Hierarchy
+    levels:
+      - unique_name: Year
+      - unique_name: Month
+      - unique_name: TimeID
+level_attributes:
+  - unique_name: TimeID
+    label: TimeID
+    contains_unique_names: false
+    dataset: V_TIME
+    is_unique_key: true
+    key_columns:
+      - TIMEID
+    name_column: TIMEID
+    sort_column: TIMEID
+  - unique_name: Year
+    label: Year
+    contains_unique_names: false
+    dataset: V_TIME
+    key_columns:
+      - FINANCE_FILTER_YEAR
+    name_column: FINANCE_FILTER_YEAR
+    sort_column: FINANCE_FILTER_YEAR
+  - unique_name: Month
+    label: Month
+    contains_unique_names: false
+    dataset: V_TIME
+    key_columns:
+      - FINANCIAL_MONTH_NUM
+      - FINANCE_FILTER_YEAR
+    name_column: FINANCIAL_MONTH_DESC
+    sort_column: FINANCIAL_MONTH_NUM
+type: standard
