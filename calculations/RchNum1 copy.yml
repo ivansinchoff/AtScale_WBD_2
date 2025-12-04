@@ -1,0 +1,11 @@
+unique_name: RchNum1 copy
+object_type: metric_calc
+label: RchNum 1+_copy
+expression: |-
+
+      COUNT(
+          NONEMPTY(
+              [Calendar_Time].[Time Hierarchy].[TimeID].members,
+              [Measures].[Sum_Universe]
+          )
+      )

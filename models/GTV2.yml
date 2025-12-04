@@ -1,6 +1,6 @@
-unique_name: GTV
+unique_name: GTV2
 object_type: model
-label: GTV
+label: GTV2
 dimensions:
   - Member_ID (1)
 metrics:
@@ -23,6 +23,7 @@ metrics:
   - unique_name: m_V_VIEWING_30_MINUTE_REACH_sum
     folder: Metrics
   - unique_name: RchNum1
+  - unique_name: RchNum1 copy
 relationships:
   - unique_name: V_DEMOGRAPHIC_AGE_ID_to_Age_Age
     from:
@@ -112,30 +113,6 @@ relationships:
     to:
       dimension: Minutes
       level: 30min
-  - unique_name: V_VIEWING_30_SAMPLE_TYPE_ID_to_Sample Type_Sample Type
-    from:
-      dataset: V_VIEWING_30
-      join_columns:
-        - SAMPLE_TYPE_ID
-    to:
-      dimension: Sample Type
-      level: Sample Type
-  - unique_name: V_VIEWING_30_GENDER_ID_to_Gender_Gender
-    from:
-      dataset: V_VIEWING_30
-      join_columns:
-        - GENDER_ID
-    to:
-      dimension: Gender
-      level: Gender
-  - unique_name: V_VIEWING_30_AGE_ID_to_Age_Age
-    from:
-      dataset: V_VIEWING_30
-      join_columns:
-        - AGE_ID
-    to:
-      dimension: Age
-      level: Age
   - unique_name: V_VIEWING_30_MARKET_ID_to_Market_Market
     from:
       dataset: V_VIEWING_30
@@ -144,14 +121,6 @@ relationships:
     to:
       dimension: Market
       level: Market
-  - unique_name: V_VIEWING_30_AREA_ID_to_Area_Area
-    from:
-      dataset: V_VIEWING_30
-      join_columns:
-        - AREA_ID
-    to:
-      dimension: Area
-      level: Area
   - unique_name: V_DEMOGRAPHIC_TIME_ID_to_Calendar_Time_TimeID
     from:
       dataset: V_DEMOGRAPHIC
@@ -168,3 +137,23 @@ relationships:
     to:
       dimension: Calendar_Time
       level: TimeID
+  - unique_name: V_VIEWING_30_MEMBER_ID_to_DEMOGRAPHICS_DEMOGRAPHIC Lvl
+    from:
+      dataset: V_VIEWING_30
+      join_columns:
+        - MEMBER_ID
+        - MARKET_ID
+        - TIME_ID
+    to:
+      dimension: DEMOGRAPHICS
+      level: DEMOGRAPHIC Lvl
+  - unique_name: V_DEMOGRAPHIC_TIME_ID_to_DEMOGRAPHICS_DEMOGRAPHIC Lvl
+    from:
+      dataset: V_DEMOGRAPHIC
+      join_columns:
+        - MEMBER_ID
+        - MARKET_ID
+        - TIME_ID
+    to:
+      dimension: DEMOGRAPHICS
+      level: DEMOGRAPHIC Lvl

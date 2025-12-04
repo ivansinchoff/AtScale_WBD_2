@@ -1,0 +1,4 @@
+object_type: model_settings
+overrides:
+    GTV2:
+        query.planning.allowCtes: false

@@ -1,0 +1,65 @@
+unique_name: DEMOGRAPHICS
+object_type: dimension
+label: DEMOGRAPHICS
+hierarchies:
+  - unique_name: DEMOGRAPHICS Hierarchy
+    label: DEMOGRAPHICS Hierarchy
+    levels:
+      - unique_name: DEMOGRAPHIC Lvl
+level_attributes:
+  - unique_name: DEMOGRAPHIC Lvl
+    label: DEMOGRAPHIC Lvl
+    contains_unique_names: false
+    dataset: V_DEMOGRAPHIC_copy
+    is_unique_key: false
+    key_columns:
+      - MEMBER_ID
+      - MARKET_ID
+      - TIME_ID
+    name_column: MEMBER_ID
+relationships:
+  - unique_name: V_DEMOGRAPHIC_copy_AGE_ID_to_Age_Age
+    from:
+      dataset: V_DEMOGRAPHIC_copy
+      hierarchy: DEMOGRAPHICS Hierarchy
+      join_columns:
+        - AGE_ID
+      level: DEMOGRAPHIC Lvl
+    to:
+      dimension: Age
+      level: Age
+    type: embedded
+  - unique_name: V_DEMOGRAPHIC_copy_GENDER_ID_to_Gender_Gender
+    from:
+      dataset: V_DEMOGRAPHIC_copy
+      hierarchy: DEMOGRAPHICS Hierarchy
+      join_columns:
+        - GENDER_ID
+      level: DEMOGRAPHIC Lvl
+    to:
+      dimension: Gender
+      level: Gender
+    type: embedded
+  - unique_name: V_DEMOGRAPHIC_copy_SAMPLE_TYPE_ID_to_Sample Type_Sample Type
+    from:
+      dataset: V_DEMOGRAPHIC_copy
+      hierarchy: DEMOGRAPHICS Hierarchy
+      join_columns:
+        - SAMPLE_TYPE_ID
+      level: DEMOGRAPHIC Lvl
+    to:
+      dimension: Sample Type
+      level: Sample Type
+    type: embedded
+  - unique_name: V_DEMOGRAPHIC_copy_AREA_ID_to_Area_Area
+    from:
+      dataset: V_DEMOGRAPHIC_copy
+      hierarchy: DEMOGRAPHICS Hierarchy
+      join_columns:
+        - AREA_ID
+      level: DEMOGRAPHIC Lvl
+    to:
+      dimension: Area
+      level: Area
+    type: embedded
+type: standard
